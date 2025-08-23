@@ -42,13 +42,12 @@ function view($path, $attributes = [])
     require base_path('views/' . $path);
 }
 
-function login($user)
+function redirect($path)
 {
-    $_SESSION['user'] = [
-        'email' => $user['email']
-    ];
-    session_regenerate_id(true);
+    header("location: {$path}");
+    exit();
 }
+
 
 function logout()
 {
