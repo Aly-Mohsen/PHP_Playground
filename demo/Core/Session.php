@@ -15,7 +15,7 @@ class Session
     }
     public static function get($key, $default = null)
     {
-        return $_SESSION['flash'][$key] ?? $_SESSION[$key] ?? $default;
+        return $_SESSION['_flash'][$key] ?? $_SESSION[$key] ?? $default;
     }
     public static function flash($key, $value)
     {
@@ -30,7 +30,7 @@ class Session
     {
         $_SESSION = [];
     }
-    public function destroy()
+    public static function destroy()
     {
         static::flush();
 
