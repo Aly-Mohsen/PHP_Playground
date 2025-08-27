@@ -1,1 +1,25 @@
+# Composer dependencies
 /vendor/
+
+# Composer lock file (optional – if you want reproducible builds, keep composer.lock)
+/composer.lock
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# PHPUnit / Pest cache
+.phpunit.result.cache
+.pest.cache
+
+# IDE / editor configs
+/.idea/
+/.vscode/
+/nbproject/
+
+# Environment / local config files
+.env
+.env.*.local
+.env.local
