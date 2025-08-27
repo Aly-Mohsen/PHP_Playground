@@ -1,6 +1,7 @@
 <?php
 
 use Core\App;
+use Core\Authenticator;
 use Core\Validator;
 use Core\Database;
 
@@ -35,8 +36,8 @@ $user = $db->query('select * from users where email = :email',[
 if ($user){
     // "This User Already Exists, try logging in"
     //redirect to login page
-    header('location: /');
-        exit();
+        redirect('/');
+
 }
 //if not, save to the database and log the user in and redirect
 else {
@@ -46,9 +47,8 @@ else {
     ]);
 
     //mark that the user has logged in
-    login($user);
-    
-    header('location: /');
-    exit();
+    (new Authenticator)->login(['email' => $email]);
+
+    redirect('/');
 }
 

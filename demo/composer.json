@@ -1,0 +1,27 @@
+{
+    "name": "aly/demo",
+    "authors": [
+        {
+            "name": "Aly-Mohsen",
+            "email": "aly.mohsen1000@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/collections": "^12.26"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "2.34",
+        "symfony/console": "^6.4.22"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
