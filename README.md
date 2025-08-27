@@ -1,6 +1,6 @@
 # Demo PHP Framework
 
-A lightweight PHP framework built from scratch (inspired by the Laracasts PHP course). This project serves as a learning playground for understanding core PHP concepts such as routing, controllers, autoloading, and testing.
+A lightweight PHP framework built from scratch. This project serves as a learning playground for understanding core PHP concepts such as routing, controllers, autoloading, and testing.
 
 ## Features
 - Custom Router with basic GET/POST support  
@@ -28,14 +28,6 @@ composer install
 ```
 
 ## Running the Project
-### Using XAMPP
-1. Place the project inside `htdocs`, e.g. `C:\xampp\htdocs\laracasts_PHP_Course\demo`  
-2. Start Apache from the XAMPP Control Panel  
-3. Open in your browser:
-```
-http://localhost/laracasts_PHP_Course/demo/public
-```
-
 ### Using PHP Built-in Server
 ```bash
 php -S localhost:8000 -t public
