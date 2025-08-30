@@ -52,3 +52,29 @@ function old($key, $default = '')
 {
     return Core\Session::get('old')[$key] ?? $default;
 }
+
+
+//helper function for css 
+
+function component($component, $attributes = [], $slot = null)
+{
+    extract($attributes);
+    $GLOBALS['slot'] = $slot;
+    require base_path("views/components/{$component}.php");
+    unset($GLOBALS['slot']);
+}
+
+function button($slot, $attributes = [])
+{
+    component('button', $attributes, $slot);
+}
+
+function textarea($attributes = [])
+{
+    component('textarea', $attributes);
+}
+
+function input($attributes = [])
+{
+    component('input', $attributes);
+}

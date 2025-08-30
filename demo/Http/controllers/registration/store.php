@@ -36,7 +36,7 @@ $user = $db->query('select * from users where email = :email',[
 if ($user){
     // "This User Already Exists, try logging in"
     //redirect to login page
-        redirect('/');
+        redirect('/login');
 
 }
 //if not, save to the database and log the user in and redirect
